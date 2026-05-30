@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Una canción para ti</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 35%),
+        linear-gradient(135deg, #0f0f0f, #211515, #000);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      padding: 28px;
+      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 26px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.03)),
+        url("images/imagen\ la\ diferencia.png");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 13px;
+      margin-bottom: 16px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      letter-spacing: -0.8px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 24px;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-decoration: none;
+      background: white;
+      color: #111;
+      padding: 16px 20px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 18px;
+      }
+
+      .card {
+        padding: 22px;
+        border-radius: 28px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="cover"></div>
+
+    <span class="tag">Una canción especial</span>
+
+    <h1>Esta canción es para ti</h1>
+
+    <p>
+      Escanea, dale play y disfruta este momento.
+    </p>
+
+    <iframe 
+      src="https://open.spotify.com/embed/track/5aJMHnC4f7OhXC4MQ6I9kU?utm_source=generator" 
+      height="152" 
+      frameborder="0" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+
+    <a 
+      class="button" 
+      href="https://open.spotify.com/intl-es/track/5aJMHnC4f7OhXC4MQ6I9kU" 
+      target="_blank">
+      ▶ Abrir en Spotify
+    </a>
+
+  </main>
+</body>
+</html>
